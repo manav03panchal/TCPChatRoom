@@ -55,7 +55,7 @@ def receive():
         # print this to the client
         print(f'Nickname of the client is {nickname}!')
         # print this to everyone in the current server
-        broadcast(f'{nickname} has joined the chat!'.encode('ascii'))
+        broadcast(f'{nickname} has joined the chat!\n'.encode('ascii'))
         # send this to the client to notify succesful connection
         client.send("Connected to the server!".encode('ascii'))
 
