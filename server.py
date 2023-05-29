@@ -2,7 +2,7 @@ import threading
 import socket
 
 host = '127.0.0.1'  # this is the localhost
-port = 55556
+port = 55557
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -55,7 +55,7 @@ def receive():
         # print this to the client
         print(f'Nickname of the client is {nickname}!')
         # print this to everyone in the current server
-        broadcast(f'{nickname} has joined the chat!\n'.encode('ascii'))
+        broadcast(f'{nickname} has joined the chat! '.encode('ascii'))
         # send this to the client to notify succesful connection
         client.send("Connected to the server!".encode('ascii'))
 
